@@ -26,12 +26,39 @@ valueTop.className=('valueTop')
 valueTop.innerText='Price'
 topList.appendChild(valueTop)
 
-//criando lista de produtos
+//criando lista de produtos--------------------------------corrigir
 let total=[]
 
 let listProducts = document.createElement("ul")
 listProducts.className=('list_products')
 main.appendChild(listProducts)
+
+let object = [
+    {
+        name:'Uva Crimson',
+        value:44.99
+    },
+    {
+        name:'Vinho Canção',
+        value:17.98
+    },
+    {
+        name:'Agua de coco',
+        value: 8.99
+    },
+    {
+        name:'Mamão',
+        value:9.98
+    },
+    {
+        name:'Água tônica',
+        value:17.98
+    }
+
+
+]
+
+
 
 function item(name, value) {
     let product = document.createElement('li')
@@ -49,11 +76,11 @@ function item(name, value) {
     listProducts.appendChild(product)
     total.push(value)
 }
-item('Uva Crimson', 44.99)
-item('Vinho Canção', 17.98)
-item('Agua de coco', 8.99)
-item('Mamão', 9.98)
-item('Água tônica', 17.98)
+
+
+for (i=0; i<object.length;i++){
+    item(object[i].name, object[i].value)
+}
 
 
 
